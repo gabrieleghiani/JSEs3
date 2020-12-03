@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+    <h1>Es3</h1>
+    Primo numero:   <input type="number" id="num1" required></input><br>
+    Secondo numero: <input type="number" id="num2" required></input><br><br>
+   <button id="somma">+</button>&nbsp;&nbsp;&nbsp;<button id="sottrazione">-</button>&nbsp;&nbsp;&nbsp;
+   <button id="moltiplicazione">X</button>&nbsp;&nbsp;&nbsp;<button id="divisione">/</button>    
+    <br><br><p id="risu"></p>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+
+var sum=$("#somma");
+var sot=$("#sottrazione");
+var molt=$("#moltiplicazione");
+var divi=$("#divisione");
+sum.on("click", function(){
+$("#risu").html("Risultato = "+(parseInt($("#num1").val())+parseInt($("#num2").val())));
+});
+
+sot.on("click", function(){
+    $("#risu").html("Risultato = "+(parseInt($("#num1").val())-parseInt($("#num2").val())));
+});
+
+molt.on("click", function(){
+    $("#risu").html("Risultato = "+(parseInt($("#num1").val())*parseInt($("#num2").val())));
+});
+
+divi.on("click", function(){
+    $("#risu").html("Risultato= "+(parseInt($("#num1").val())/parseInt($("#num2").val())));
+});
+
+    </script>
+    </body>
+</html>
