@@ -99,7 +99,7 @@
           "</td></tr>";
         var line = $(string);
         $("#tab").append(line);
-
+            var ciao;
         var arrayLine = JSON.parse(localStorage.getItem("array") || "[]");
         arrayLine.push(string);
         localStorage.setItem("array", JSON.stringify(arrayLine));
